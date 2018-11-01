@@ -1,0 +1,5 @@
+transmission_rpc_whitelist : 
+  - 127.0.0.1
+transmission_rpc_password: transmission
+transmission_rpc_username: transmission
+transmission_download_dir : /var/lib/transmission-daemon/downloads

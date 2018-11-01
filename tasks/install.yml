@@ -1,0 +1,16 @@
+---
+
+- name: Install Utility
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - transmission-daemon
+
+- name: Stop transmission before Changing the configuration
+  service:
+    name: transmission-daemon.service
+    state: stopped
+
+- name: create configuration file
+  template: src=settings.json.j2 dest=/etc/transmission-daemon/settings.json

@@ -1,0 +1,9 @@
+- name: Stop transmission
+  service:
+    name: transmission-daemon.service
+    state: stopped
+
+- name: Start transmission
+  service:
+    name: transmission-daemon.service
+    state: started
